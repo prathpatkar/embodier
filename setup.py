@@ -30,6 +30,7 @@ setup(
     entry_points={
         "console_scripts": [
             "embodier=embodier.__main__",
+            
         ]
     },
 )
