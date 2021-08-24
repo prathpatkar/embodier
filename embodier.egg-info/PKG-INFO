@@ -1,3 +1,19 @@
+Metadata-Version: 2.1
+Name: embodier
+Version: 1.0.3
+Summary: It generates the unique avatar, which save image into PNG, JPG, or Base64 string. you can use this package to give avatar to newly registered users on your application.
+Home-page: https://github.com/2000prath/embodier
+Author: Prathamesh Patkar
+Author-email: 2000prath@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
 
 # Dynamic Avatar Generator
 This library will help you to generate profile image for newly registered user on your application, like GitHub create profile picture for new users E.g. <br>
@@ -29,5 +45,7 @@ img.show()
 `img.show()` to open generated image <br>
 `img.save('image.png')` to save image with image name <br>
 `obj.toBase64(img)` to get Base64 value of generated image <br>
+
+
 
 
