@@ -1,11 +1,12 @@
 Metadata-Version: 2.1
 Name: embodier
-Version: 1.0.3
+Version: 1.0.4
 Summary: It generates the unique avatar, which save image into PNG, JPG, or Base64 string. you can use this package to give avatar to newly registered users on your application.
 Home-page: https://github.com/2000prath/embodier
 Author: Prathamesh Patkar
 Author-email: 2000prath@gmail.com
 License: MIT
+Project-URL: Source Code, https://github.com/2000prath/embodier
 Platform: UNKNOWN
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Programming Language :: Python :: 3.6
