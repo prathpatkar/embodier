@@ -1,6 +1,6 @@
 __author__ = '2000prath@gmail.com'
 
-from PIL import Image,ImageEnhance,ImageOps
+from PIL import Image,ImageEnhance,ImageOps,ImageDraw,ImageFont
 import numpy as np
 import random
 import time
@@ -55,7 +55,7 @@ class AvatarGenerator:
         """
         @xy_axis : Row and Columns, it should be same Eg. 5 for(5*5 matrix)\n
         @pixels : Use less pixels to minimize final image siz Eg. 300 e\n
-        @background_color : Specify the color of background Eg. white, grey, lighgrey\n
+        @background_color : Specify the color of background (accepts color name, Hex code,RGB values)Eg. white, grey, lighgrey\n
         @border : Boolean - True: add border, False: no border\n
         @border_width : size
         """
@@ -87,5 +87,26 @@ class AvatarGenerator:
             img = ImageOps.expand(img,border=border_width,fill=background_color)
         return img
 
+    def TextAvatar(self,text,background_color=None):
+        pixels = 300
+        if not text:
+            print("This function accept text, please provide a text to create image")
+            return
+        if len(text) != 2:
+            print("************* Please provide only 2-3 latters in order to create text image *************")
+            text = text[0:2]
+        fontSize = 160
+        centerPixel = 48
+        colors = ['#808080','#800000','#808000','#FF0000','#008000','#008080','#0000FF','#000080','#FF00FF','#800080']
+        if not background_color:
+            background_color = random.choice(colors)
+        img = Image.new('RGB', (pixels, pixels), background_color)
+        I1 = ImageDraw.Draw(img)
+        myFont = ImageFont.truetype('arial.ttf', fontSize)
+        I1.text((centerPixel, centerPixel+15), text.upper() ,font=myFont, fill='#FDFDFD')
+        return img
+
+obj = AvatarGenerator()
+obj.TextAvatar('yy')
 
 
