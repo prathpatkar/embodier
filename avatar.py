@@ -51,7 +51,7 @@ class AvatarGenerator:
         return array
 
 
-    def CreateAvatar(self,xy_axis=5,pixels=300,background_color='lightgrey',border=True,border_width=25):
+    def BlockAvatar(self,xy_axis=5,pixels=300,background_color='lightgrey',border=True,border_width=25):
         """
         @xy_axis : Row and Columns, it should be same Eg. 5 for(5*5 matrix)\n
         @pixels : Use less pixels to minimize final image siz Eg. 300 e\n
