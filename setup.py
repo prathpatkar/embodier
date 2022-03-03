@@ -17,12 +17,10 @@ setup(
     url="https://github.com/2000prath/embodier",
     project_urls={
           "Source Code": "https://github.com/2000prath/embodier",
+          "API Reference": "https://embodierapi.herokuapp.com/"
     },
     author="Prathamesh Patkar",
     author_email="2000prath@gmail.com",
-    project_urls = {
-        "API Reference": "https://embodierapi.herokuapp.com/"
-    },
     license="MIT",
     classifiers=[
         "License :: OSI Approved :: MIT License",

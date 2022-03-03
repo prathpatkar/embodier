@@ -1,3 +1,2 @@
 [console_scripts]
-embodier = embodier.__init__:AvatarGenerator
-
+embodier = embodier.__main__:AvatarGenerator
