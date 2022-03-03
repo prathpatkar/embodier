@@ -2,3 +2,6 @@ Include
 Lib
 Scripts
 pyenv.cfg
+dist
+build
+*.egg-info
