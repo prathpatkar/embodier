@@ -10,8 +10,8 @@ README = (HERE / "README.md").read_text()
 # This call to setup() does all the work
 setup(
     name="embodier",
-    version="1.0.6",
-    description="It generates the unique avatar, which save image into PNG, JPG, or Base64 string. you can use this package to give avatar to newly registered users on your application.",
+    version="1.0.8",
+    description="Embodier creates a unique avatar that provide you image as a PNG, JPG, or Base64 string. This package is used to provide an avatar for new users on your application.",
     long_description=README,
     long_description_content_type="text/markdown",
     url="https://github.com/2000prath/embodier",
@@ -20,6 +20,9 @@ setup(
     },
     author="Prathamesh Patkar",
     author_email="2000prath@gmail.com",
+    project_urls = {
+        "API Reference": "https://embodierapi.herokuapp.com/"
+    },
     license="MIT",
     classifiers=[
         "License :: OSI Approved :: MIT License",
@@ -32,7 +35,7 @@ setup(
     install_requires=['numpy==1.19.5', 'Pillow==8.1.0'],
     entry_points={
         "console_scripts": [
-            "embodier=embodier.__init__:AvatarGenerator",
+            "embodier=embodier.__main__:AvatarGenerator",
         ]
     },
 )

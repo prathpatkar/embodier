@@ -1,9 +1,11 @@
 __author__ = '2000prath@gmail.com'
 
-from PIL import Image,ImageEnhance,ImageOps,ImageDraw,ImageFont
+from PIL import Image,ImageOps,ImageDraw,ImageFont
 import numpy as np
 import random
 import time
+import base64
+from io import BytesIO
 
 class AvatarGenerator:
     """
@@ -15,9 +17,6 @@ class AvatarGenerator:
 
     """
     def toBase64(self,img):
-        import base64
-        from io import BytesIO
-
         buffered = BytesIO()
         img.save(buffered, format="PNG")
         img_base64 = base64.b64encode(buffered.getvalue())
@@ -25,10 +24,11 @@ class AvatarGenerator:
 
     def getMatrix(self,x,y):
         #don't use more than 10 seconds to generate matrix
-        wait_till = time.time() + 10
+        wait_till = time.time() + 2
         ones = 0
         zeros = 1
-        array=None
+        array=None        
+
         while(ones<zeros and time.time() < wait_till):
             array = np.random.randint(2, size=(x, y))
             for i in range(len(array)):
@@ -37,17 +37,22 @@ class AvatarGenerator:
                         ones+=1
                     else:
                         zeros+=1
-            for i in range(len(array)):
-                if array[i][1]==1:
-                    ones+=1
-                else:
-                    zeros+=1
-                if array[i][0]==1:
-                    ones+=1
-                else:
-                    zeros+=1
-                array[i][len(array)-2] = array[i][1]
-                array[i][len(array)-1] = array[i][0]
+        
+        if array is not None:
+            array = np.random.randint(2, size=(x, y))
+        
+        for i in range(len(array)):
+            if array[i][1]==1:
+                ones+=1
+            else:
+                zeros+=1
+            if array[i][0]==1:
+                ones+=1
+            else:
+                zeros+=1
+            array[i][len(array)-2] = array[i][1]
+            array[i][len(array)-1] = array[i][0]
+            
         return array
 
 
@@ -105,8 +110,5 @@ class AvatarGenerator:
         myFont = ImageFont.truetype('arial.ttf', fontSize)
         I1.text((centerPixel, centerPixel+15), text.upper() ,font=myFont, fill='#FDFDFD')
         return img
-
-obj = AvatarGenerator()
-obj.TextAvatar('yy')
 
 
