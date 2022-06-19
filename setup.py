@@ -10,7 +10,7 @@ README = (HERE / "README.md").read_text()
 # This call to setup() does all the work
 setup(
     name="embodier",
-    version="1.0.8",
+    version="1.0.9",
     description="Embodier creates a unique avatar that provide you image as a PNG, JPG, or Base64 string. This package is used to provide an avatar for new users on your application.",
     long_description=README,
     long_description_content_type="text/markdown",

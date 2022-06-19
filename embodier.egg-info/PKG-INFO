@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: embodier
-Version: 1.0.8
+Version: 1.0.9
 Summary: Embodier creates a unique avatar that provide you image as a PNG, JPG, or Base64 string. This package is used to provide an avatar for new users on your application.
 Home-page: https://github.com/2000prath/embodier
 Author: Prathamesh Patkar
