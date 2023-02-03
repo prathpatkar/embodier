@@ -3,8 +3,8 @@ __author__ = '2000prath@gmail.com'
 from PIL import Image,ImageEnhance,ImageOps
 import numpy as np
 import random
-import time
-
+import time 
+print("test')
 class AvatarGenerator:
     """
     obj = AvatarGenerator()\n
